@@ -5,8 +5,15 @@
 - python3 setup.py build
 - python setup.py sdist      #生成压缩包(zip/tar.gz)
 
+- git 
+    - 出现 remote: Invalid username or password. fatal: Authentication failed
+    - 解决:  git remote add origin git@github.com:makelove/python-shopee.git
 
+- 版本
+    - v1
 
+- 代码更新:
+    - 1
 
 pyshopee v1.3.9
 ================================
