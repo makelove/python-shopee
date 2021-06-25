@@ -15,10 +15,11 @@ from .rma import RMA
 from .returns import Returns
 from .public import Public
 from .toppicks import Toppicks
+from .push import Push
 
 
 # installed sub-module
-registered_module = {
+registered_module = {  # 注册模块
     "shop": Shop,
     "shopcategory": ShopCategory,
     "item": Item,
@@ -29,7 +30,8 @@ registered_module = {
     "returns": Returns,
     "rma": RMA,
     "public": Public,
-    "toppicks": Toppicks
+    "toppicks": Toppicks,
+    "push": Push,
 }
 
 
