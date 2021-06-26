@@ -144,7 +144,7 @@ class Client(object, metaclass=ClientMeta):
             timeout = body.get("timeout")
             body.pop("timeout")
         else:
-            timeout = 10
+            timeout = 20
 
         if body is not None:
             parameter.update(body)
