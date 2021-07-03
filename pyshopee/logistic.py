@@ -20,6 +20,13 @@ class Logistic(BaseModule):
         """
         return self.client.execute("logistics/address/get", "POST", kwargs)
 
+    def delete_address(self, **kwargs):
+        """
+        Use this call to get all required param for init logistic.
+        :return:
+        """
+        return self.client.execute("logistics/address/delete", "POST", kwargs)
+
     def get_airway_bill(self, **kwargs):
         """
         Use this API to get airway bill for orders
@@ -52,6 +59,17 @@ class Logistic(BaseModule):
         :return:
         """
         return self.client.execute("logistics/order/get", "POST", kwargs)
+
+    def get_Forder_Waybill(self, **kwargs):
+        """
+        https://open.shopee.com/documents?module=3&type=1&id=447&version=1
+
+        Use this API to get airwaybill for fulfillment orders.
+
+        :param kwargs:
+        :return:
+        """
+        return self.client.execute("logistics/forder_waybill/get_mass", "POST", kwargs)
 
     def get_parameter_for_init(self, **kwargs):
         """
@@ -116,7 +134,7 @@ class Logistic(BaseModule):
         based on each order so that developer can get all the required parameters ready in this API for Init.
 
         This API is an alternative of GetParameterForInit, GetAddresss, GetTimeSlot and GetBranch as a set.
-        
+
         @@Significant OpenAPI Updates (2018-09-15/2018-09-11)
         [optional new flow added in Documentation]
          - alternative for get_parameter_for_init (GetParameterForInit)
@@ -126,15 +144,3 @@ class Logistic(BaseModule):
         """
 
         return self.client.execute("logistics/init_info/get", "POST", kwargs)
-
-
-
-
-
-
-
-
-
-
-
-
