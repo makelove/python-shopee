@@ -49,9 +49,10 @@ class Client(object, metaclass=ClientMeta):
     # CACHED_MODULE = {}
 
     BASE_URL = "https://partner.shopeemobile.com/api/v1"
+    # BASE_URL = "https://partner.test-stable.shopeemobile.com/api/v1"  # 测试环境，不能授权？
     # PER_MINUTE_API_RATE = 1000
 
-    def __init__(self, shop_id, partner_id, secret_key):
+    def __init__(self, partner_id, secret_key, shop_id=None):
         ''' initialize basic params and cache class 
         '''
         self.shop_id = shop_id
